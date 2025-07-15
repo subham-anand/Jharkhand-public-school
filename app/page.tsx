@@ -4,6 +4,7 @@ import Hero from '@/components/MyComponents/Hero'
 import ImageGallery from '@/components/MyComponents/ImageGallary'
 import { MainNavbar } from '@/components/MyComponents/MainNavbar'
 import NoticeBoard from '@/components/MyComponents/NoticeBoard'
+import Testimonials from '@/components/MyComponents/Testimonials'
 import WhyChooseUs from '@/components/MyComponents/WhyChooseUs'
 import React from 'react'
 
@@ -18,6 +19,7 @@ export default function page() {
     <AdmissionOpen/>
     <NoticeBoard/>
     <ImageGallery/>
+    <Testimonials/>
     </>
   )
 }
