@@ -1,6 +1,6 @@
 import React from 'react'
 import CtaBtns from './CtaBtns';
-import { IconInfoHexagon, IconPng } from '@tabler/icons-react';
+import { IconInfoHexagon, IconSchool } from '@tabler/icons-react';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -55,7 +55,7 @@ export default function Hero() {
             <CtaBtns 
               value='Apply for Admission' 
               color='orange' 
-              icon={<IconPng size={20}/>}  
+              icon={<IconSchool size={20}/>}  
             />
           </div>
 
