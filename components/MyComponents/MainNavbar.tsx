@@ -11,7 +11,7 @@ import {
 	MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { navItems } from "@/utils/navItems";
-import { IconPhoneCall, IconMail, IconMapPin, IconClock, IconStar, IconShield } from "@tabler/icons-react";
+import { IconPhoneCall, IconMail, IconMapPin, IconClock, IconStar} from "@tabler/icons-react";
 import { useState, useEffect } from "react";
 
 export function MainNavbar() {
