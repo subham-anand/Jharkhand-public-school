@@ -281,20 +281,20 @@ export default function MainFooter() {
                   <ContactInfoItem
                     icon={<IconMapPin size={18} />}
                     title="Address"
-                    content="123 Education Street, Ranchi, Jharkhand 834001"
+                    content="Thana road, Barharwa, Sahibganj, Jharkhand, 816101"
                     link="https://maps.google.com"
                   />
                   <ContactInfoItem
                     icon={<IconPhone size={18} />}
                     title="Phone"
-                    content="+91 9876543210"
-                    link="tel:+919876543210"
+                    content="+91 8541061847"
+                    link="tel:+918541061847"
                   />
                   <ContactInfoItem
                     icon={<IconMail size={18} />}
                     title="Email"
-                    content="info@jharkhnadpublicschool.edu"
-                    link="mailto:info@jharkhnadpublicschool.edu"
+                    content="contact@jpsbarharwa.in"
+                    link="mailto:contact@jpsbarharwa.in"
                   />
                   <ContactInfoItem
                     icon={<IconClock size={18} />}

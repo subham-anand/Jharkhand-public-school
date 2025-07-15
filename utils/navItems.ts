@@ -10,5 +10,17 @@ export const navItems = [
 	{
 		name: "Contact",
 		link: "#contact"
-	}
+	},
+	{
+		name: "Contact",
+		link: "#contact"
+	},
+	{
+		name: "Contact",
+		link: "#contact"
+	},
+	{
+		name: "Contact",
+		link: "#contact"
+	},
 ];
