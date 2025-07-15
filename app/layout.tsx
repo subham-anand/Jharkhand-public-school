@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jharkhand Public School",
     description:
-      "a leading primary school in Jharkhand offering quality education, strong values, and creative learning from Nursery to Class 8.",
+      "A leading primary school in Jharkhand offering quality education, strong values, and creative learning from Nursery to Class 8.",
     url: "https://jpsbarharwa.in",
     siteName: "Jharkhand Public School",
     images: [

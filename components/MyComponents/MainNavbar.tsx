@@ -79,7 +79,7 @@ export function MainNavbar() {
 							<NavbarLogo />
 							<div className="hidden sm:block">
 								<div className="flex flex-col">
-									<span className="text-lg font-bold text-gray-900">JPS</span>
+									{/* <span className="text-lg font-bold text-gray-900">JPS</span> */}
 									<div className="flex items-center gap-1">
 										<IconStar size={12} className="text-yellow-400 fill-yellow-400" />
 										<span className="text-xs text-gray-600">Since 2010</span>
