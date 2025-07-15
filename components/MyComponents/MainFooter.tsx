@@ -336,7 +336,7 @@ export default function MainFooter() {
                   Privacy Policy
                 </a>
                 <span className="text-gray-500">•</span>
-                <a href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/legal/TermsofService" className="text-gray-300 hover:text-white transition-colors">
                   Terms of Service
                 </a>
                 <span className="text-gray-500">•</span>
