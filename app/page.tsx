@@ -1,3 +1,4 @@
+import About from '@/components/MyComponents/About'
 import Hero from '@/components/MyComponents/Hero'
 import { MainNavbar } from '@/components/MyComponents/MainNavbar'
 import React from 'react'
@@ -8,6 +9,7 @@ export default function page() {
     <MainNavbar/>
     <hr />
     <Hero/>
+    <About/>
     </>
   )
 }
