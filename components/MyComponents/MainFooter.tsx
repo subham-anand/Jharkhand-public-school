@@ -332,7 +332,7 @@ export default function MainFooter() {
               </div>
               
               <div className="flex flex-wrap justify-center gap-4 text-xs">
-                <a href="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/legal/PrivacyPolicy" className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
                 </a>
                 <span className="text-gray-500">•</span>
