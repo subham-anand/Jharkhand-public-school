@@ -1,6 +1,7 @@
 import About from '@/components/MyComponents/About'
 import AdmissionOpen from '@/components/MyComponents/AdmissionOpen'
 import Hero from '@/components/MyComponents/Hero'
+import ImageGallery from '@/components/MyComponents/ImageGallary'
 import { MainNavbar } from '@/components/MyComponents/MainNavbar'
 import NoticeBoard from '@/components/MyComponents/NoticeBoard'
 import WhyChooseUs from '@/components/MyComponents/WhyChooseUs'
@@ -16,6 +17,7 @@ export default function page() {
     <WhyChooseUs/>
     <AdmissionOpen/>
     <NoticeBoard/>
+    <ImageGallery/>
     </>
   )
 }
