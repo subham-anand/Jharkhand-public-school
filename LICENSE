@@ -1,4 +1,164 @@
-WBSITE LICENSE AGREEMENT
+SOFTWARE LICENSE AGREEMENT
+===========================
+
+JHARKHAND PUBLIC SCHOOL WEBSITE
+
+This Software License Agreement ("Agreement") is entered into on August 1, 2025, by and between:
+
+LICENSOR: Aditya Kumar Gupta
+Address: Naya bazar, Barharwa, Sahibganj, Jharkhand, India 816101
+Email: ad1123itya@gmail.com
+("Developer" or "Licensor")
+
+AND
+
+LICENSEE: Subham Anand (on behalf of Jharkhand Public School)
+Organization: Jharkhand Public School
+Address: Barharwa, Jharkhand, India
+Email: contact@jpsbarharwa.in
+("Client" or "Licensee")
+
+Collectively referred to as "the Parties".
+
+RECITALS
+--------
+WHEREAS, Developer has created and developed a website software application for educational institution management; and
+WHEREAS, Client desires to obtain a license to use said software for their educational institution operations; and
+WHEREAS, the Parties wish to set forth the terms and conditions of such license;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the Parties agree as follows:
+
+1. PROJECT DETAILS AND SPECIFICATIONS
+-------------------------------------
+1.1 Project Name: Jharkhand Public School Website
+1.2 Description: A comprehensive school website with content management capabilities designed for educational institution operations and public information dissemination
+1.3 Technology Stack: Next.js 15.4.1, React 19.1.0, TypeScript 5.0, Tailwind CSS 4.0
+1.4 Delivery Date: August 1, 2025
+1.5 Version: 1.0.0
+1.6 Domain: https://jpsbarharwa.in
+
+2. GRANT OF LICENSE
+------------------
+2.1 Subject to the terms and conditions of this Agreement, Developer hereby grants to Client a non-exclusive, non-transferable, and non-sublicensable license to use the Software solely for Client's internal business operations.
+
+2.2 The license granted herein includes the right to:
+    a) Install and operate the Software on Client's designated servers or hosting platforms
+    b) Modify the Software code for internal customization purposes only
+    c) Create derivative works solely for Client's internal use
+    d) Use the Software for the operation of Jharkhand Public School's online presence
+
+2.3 This license is perpetual, subject to the termination provisions set forth herein.
+
+3. RESTRICTIONS AND LIMITATIONS
+------------------------------
+3.1 Client shall NOT, without prior written consent from Developer:
+    a) Sell, resell, lease, rent, or otherwise commercially distribute the Software
+    b) Sublicense, assign, or transfer any rights under this Agreement to third parties
+    c) Use the Software or any portion thereof for any client projects or third-party services
+    d) Reverse engineer, decompile, or disassemble the Software (except as permitted by applicable law)
+    e) Remove or alter any proprietary notices, labels, or marks on the Software
+    f) Claim authorship or ownership of the original Software code
+
+3.2 Client acknowledges that the Software contains proprietary and confidential information of Developer.
+
+4. INTELLECTUAL PROPERTY AND OWNERSHIP
+-------------------------------------
+4.1 Developer retains all right, title, and interest in and to the original Software code, including all intellectual property rights therein.
+
+4.2 Client shall own the customized, deployed version of the Software as configured for their specific use, but not the underlying source code or architecture.
+
+4.3 Any improvements, modifications, or derivative works created by Client shall be considered work-for-hire and shall become the property of Client for their internal use only.
+
+4.4 The Software may incorporate third-party open-source components, which are governed by their respective licenses.
+
+5. PAYMENT AND CONSIDERATION
+---------------------------
+5.1 Client acknowledges that full consideration for the Software license has been received by Developer.
+
+5.2 No additional license rights are granted until all financial obligations are fully satisfied.
+
+5.3 This Agreement represents the complete understanding regarding compensation for the licensed Software.
+
+6. SUPPORT AND MAINTENANCE
+--------------------------
+6.1 Developer agrees to provide bug fixes and critical security updates for a period of five (5) years from the Effective Date at no additional cost.
+
+6.2 Support services are limited to:
+    a) Correction of material software defects that prevent normal operation
+    b) Security patches for known vulnerabilities
+    c) Compatibility updates for major browser changes
+
+6.3 Additional support, feature enhancements, or custom development shall require a separate written agreement.
+
+6.4 Support requests must be submitted in writing to Developer's designated email address.
+
+7. WARRANTIES AND DISCLAIMERS
+-----------------------------
+7.1 Developer warrants that:
+    a) The Software will perform substantially in accordance with its specifications
+    b) Developer has the right to grant the license herein
+    c) The Software does not infringe any third-party intellectual property rights
+
+7.2 EXCEPT AS EXPRESSLY SET FORTH HEREIN, THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+8. LIMITATION OF LIABILITY
+-------------------------
+8.1 IN NO EVENT SHALL DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, REGARDLESS OF THE THEORY OF LIABILITY.
+
+8.2 DEVELOPER'S TOTAL LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT PAID BY CLIENT FOR THE SOFTWARE.
+
+9. INDEMNIFICATION
+-----------------
+9.1 Client agrees to indemnify and hold harmless Developer from any claims, damages, or expenses arising from Client's use of the Software, except for claims directly resulting from Developer's gross negligence or willful misconduct.
+
+10. TERMINATION
+--------------
+10.1 This Agreement may be terminated:
+     a) By either party upon material breach by the other party, provided thirty (30) days written notice is given and the breach remains uncured
+     b) By Developer immediately upon Client's insolvency or assignment for benefit of creditors
+     c) By mutual written consent of both parties
+
+10.2 Upon termination, Client shall cease all use of the Software and destroy all copies in their possession, except for the deployed production version which may continue to operate under the terms existing at termination.
+
+10.3 Sections 4 (Intellectual Property), 7 (Warranties), 8 (Limitation of LIABILITY), 9 (Indemnification), and 11 (General Provisions) shall survive termination.
+
+11. GENERAL PROVISIONS
+---------------------
+11.1 Governing Law: This Agreement shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.
+
+11.2 Jurisdiction: Any disputes arising under this Agreement shall be subject to the exclusive jurisdiction of the courts of Jharkhand, India.
+
+11.3 Entire Agreement: This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements relating to the subject matter hereof.
+
+11.4 Amendment: This Agreement may only be modified by written agreement signed by both parties.
+
+11.5 Severability: If any provision of this Agreement is deemed invalid or unenforceable, the remainder shall continue in full force and effect.
+
+11.6 Force Majeure: Neither party shall be liable for delays or failures in performance due to circumstances beyond their reasonable control.
+
+11.7 Notices: All notices required hereunder shall be in writing and delivered to the addresses set forth above.
+
+12. EXECUTION
+------------
+By signing below, the parties acknowledge that they have read, understood, and agree to be bound by the terms of this Agreement.
+
+LICENSOR (DEVELOPER):
+Name: Aditya Kumar Gupta
+Title: Software Developer
+Signature: _________________________
+Date: August 1, 2025
+
+LICENSEE (CLIENT):
+Name: Subham Anand
+Title: Representative, Jharkhand Public School
+Organization: Jharkhand Public School
+Signature: _________________________
+Date: August 1, 2025
+
+---
+
+© 2025 Aditya Kumar Gupta. All rights reserved.
+This Software License Agreement is proprietary and confidential.
 --------------------------
 
 This Software License Agreement ("Agreement") is made on 1 AUG 2025, between:
