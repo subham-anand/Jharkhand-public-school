@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: `"JPS Contact Form" <${process.env.EMAIL_USER}>`, 
       to: 'contact@jpsbarharwa.in',
-      replyTo: `"${firstName} ${lastName}" <${email}>`,
+      // replyTo: `"${firstName} ${lastName}" <${email}>`,
       subject: `🏫 Contact Form Submission: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
