@@ -1,5 +1,4 @@
 # Lenis Smooth Scroll Implementation
-
 ## 🚀 What's Been Implemented
 
 I've successfully integrated **Lenis** smooth scrolling into your Jharkhand Public School website. Here's what has been added:
