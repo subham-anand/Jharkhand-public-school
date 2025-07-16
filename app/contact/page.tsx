@@ -235,8 +235,9 @@ export default function ContactPage() {
           
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="aspect-w-16 aspect-h-9 h-96">
+ 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.123456789!2d87.654321!3d25.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBarharwa%2C+Jharkhand!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9582179008826!2d87.77471577541391!3d24.855401677932598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fa6189cc06822d%3A0x63633e2f81711d97!2sJharkhand%20Public%20School%20(Barharwa)!5e1!3m2!1sen!2sin!4v1752658567093!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
