@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider"
+import SmoothScrollProvider from "@/components/SmoothScrollProvider"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -62,14 +63,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-           <ThemeProvider
+        <SmoothScrollProvider>
+          <ThemeProvider
             attribute="class"
             defaultTheme="light"
             enableSystem={true}
             disableTransitionOnChange={false}
           >
-        {children}
+            {children}
           </ThemeProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );
