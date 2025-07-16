@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import {
 	Navbar,
 	NavBody,
@@ -164,7 +165,7 @@ export function MainNavbar() {
 							{/* Navigation Links */}
 							<div className="space-y-2 mb-6">
 								{navItems.map((item, idx) => (
-									<a
+									<Link
 										key={`mobile-link-${idx}`}
 										href={item.link}
 										onClick={() => setIsMobileMenuOpen(false)}
@@ -172,7 +173,7 @@ export function MainNavbar() {
 									>
 										<span className="font-medium">{item.name}</span>
 										<span className="text-gray-400 group-hover:text-blue-600 transition-colors">→</span>
-									</a>
+									</Link>
 								))}
 							</div>
 

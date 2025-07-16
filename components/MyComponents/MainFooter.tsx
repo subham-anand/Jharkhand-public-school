@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import Link from 'next/link'
 import { 
   IconMapPin, 
   IconPhone, 
@@ -26,13 +27,13 @@ const QuickLinkItem = ({
   icon?: React.ReactNode;
 }) => {
   return (
-    <a 
+    <Link 
       href={href}
       className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 group py-1"
     >
       {icon && <span className="text-blue-400 group-hover:text-blue-300 transition-colors">{icon}</span>}
       <span>{children}</span>
-    </a>
+    </Link>
   );
 };
 
@@ -117,15 +118,15 @@ export default function MainFooter() {
 
   const quickLinks = {
     about: [
-      { href: '#about', label: 'About Us' },
-      { href: '#why-choose-us', label: 'Why Choose JPS' },
-      { href: '#testimonials', label: 'Parent Reviews' },
-      { href: '#gallery', label: 'Photo Gallery' },
-      { href: '#notices', label: 'Latest News' }
+      { href: '/AboutUs', label: 'About Us' },
+      { href: '/#why-choose-us', label: 'Why Choose JPS' },
+      { href: '/#testimonials', label: 'Parent Reviews' },
+      { href: '/#gallery', label: 'Photo Gallery' },
+      { href: '/#notices', label: 'Latest News' }
     ],
     admissions: [
-      { href: '#admissions', label: 'Admission Process' },
-      { href: '/admission-form', label: 'Apply Online' },
+      { href: '/Admission', label: 'Admission Process' },
+      { href: '/Admission/NewAdmissionForm', label: 'Apply Online' },
       { href: '/admission-requirements', label: 'Requirements' },
       { href: '/fee-structure', label: 'Fee Structure' },
       { href: '/scholarship', label: 'Scholarships' }
@@ -332,17 +333,17 @@ export default function MainFooter() {
               </div>
               
               <div className="flex flex-wrap justify-center gap-4 text-xs">
-                <a href="/legal/PrivacyPolicy" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/legal/PrivacyPolicy" className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
                 <span className="text-gray-500">•</span>
-                <a href="/legal/TermsofService" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/legal/TermsofService" className="text-gray-300 hover:text-white transition-colors">
                   Terms of Service
-                </a>
+                </Link>
                 <span className="text-gray-500">•</span>
-                <a href="/sitemap" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/sitemap" className="text-gray-300 hover:text-white transition-colors">
                   Sitemap
-                </a>
+                </Link>
               </div>
             </div>
           </div>
