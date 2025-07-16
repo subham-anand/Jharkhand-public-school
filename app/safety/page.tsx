@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { IconShield, IconCamera, IconUsers, IconFirstAidKit } from '@tabler/icons-react'
 
 export const metadata = {
