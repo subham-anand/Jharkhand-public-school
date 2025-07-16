@@ -48,10 +48,12 @@ If you prefer not to use Gmail, you can use:
 ✅ **Professional Email Template**: HTML formatted emails
 
 ## Email Template Includes:
-- Sender's contact details
-- Form submission data
-- Professional formatting
-- Clear reply-to information
+- **Professional sender display**: Shows "JPS Contact Form" instead of your email
+- **Clear sender identification**: Shows the actual person who sent the message
+- **Reply-to functionality**: Click reply to respond directly to the sender
+- **Professional formatting**: Beautiful HTML design with school branding
+- **All form data**: Name, email, phone, subject, and message
+- **Visual indicators**: Emojis and color coding for easy reading
 
 ## Testing
 

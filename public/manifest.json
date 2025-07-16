@@ -1,0 +1,91 @@
+{
+  "name": "Jharkhand Public School - Nurturing Young Minds",
+  "short_name": "JPS Barharwa",
+  "description": "Leading primary school in Barharwa, Jharkhand offering quality education from Nursery to Class 8 with JAC Board affiliation and Hindi medium instruction.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["education", "school", "learning"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Jharkhand Public School Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About Us",
+      "short_name": "About",
+      "description": "Learn about JPS history and mission",
+      "url": "/AboutUs",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Admission",
+      "short_name": "Admission",
+      "description": "Apply for admission to JPS",
+      "url": "/Admission",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "new-client"
+}
