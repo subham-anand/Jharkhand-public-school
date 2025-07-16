@@ -8,7 +8,7 @@ import {
   IconClock, 
   IconBrandFacebook, 
   IconBrandInstagram, 
-  IconBrandTwitter, 
+  IconBrandWhatsapp, 
   IconBrandYoutube,
   IconSchool,
   IconHeart,
@@ -179,7 +179,7 @@ export default function MainFooter() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">JPS</h3>
-                    <p className="text-xs text-gray-300">Since 2010</p>
+                    <p className="text-xs text-gray-300">Since 2009</p>
                   </div>
                 </div>
                 
@@ -190,7 +190,7 @@ export default function MainFooter() {
                     <h4 className="font-bold text-blue-300">Jharkhand Public School</h4>
                   </div>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    <span className="font-semibold text-white">Educating with Heart Since 2010.</span>
+                    <span className="font-semibold text-white">Educating with Heart Since 2009.</span>
                     <br />
                     Helping young minds bloom with care, creativity, and character.
                   </p>
@@ -217,10 +217,10 @@ export default function MainFooter() {
                     color="bg-pink-600"
                   />
                   <SocialLink
-                    href="https://twitter.com/jharkhnadpublicschool"
-                    icon={<IconBrandTwitter size={18} />}
-                    label="Twitter"
-                    color="bg-blue-400"
+                    href="https://wa.me/918541061847"
+                    icon={<IconBrandWhatsapp size={18} />}
+                    label="WhatsApp"
+                    color="bg-green-500"
                   />
                   <SocialLink
                     href="https://youtube.com/jharkhnadpublicschool"

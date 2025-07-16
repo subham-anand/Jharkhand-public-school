@@ -92,7 +92,7 @@ const AdmissionStats = () => (
         <span className="text-2xl sm:text-3xl">🤝</span>
       </div>
       <div className="text-xl sm:text-2xl font-bold text-purple-600">Support</div>
-      <div className="text-xs sm:text-sm text-gray-600 font-medium">24/7 Help</div>
+      <div className="text-xs sm:text-sm text-gray-600 font-medium">Contact Support</div>
     </div>
     
     <div className="text-center group">
@@ -145,7 +145,7 @@ export default function AdmissionOpen() {
           <div className="max-w-3xl mx-auto space-y-4">
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-medium">
               Admissions are now open for{' '}
-              <span className="font-bold text-blue-600">Nursery to Class 5</span>.
+              <span className="font-bold text-blue-600">Nursery to Class 8</span>.
             </p>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               Join a school that{' '}

@@ -83,7 +83,7 @@ export function MainNavbar() {
 									{/* <span className="text-lg font-bold text-gray-900">JPS</span> */}
 									<div className="flex items-center gap-1">
 										<IconStar size={12} className="text-yellow-400 fill-yellow-400" />
-										<span className="text-xs text-gray-600">Since 2010</span>
+										<span className="text-xs text-gray-600">Since 2009</span>
 									</div>
 								</div>
 							</div>
@@ -130,7 +130,7 @@ export function MainNavbar() {
 								<NavbarLogo />
 								<div className="flex flex-col">
 									<span className="text-base font-bold text-gray-900">JPS</span>
-									<span className="text-xs text-gray-600">Est. 2010</span>
+									<span className="text-xs text-gray-600">Est. 2009</span>
 								</div>
 							</div>
 							
@@ -210,7 +210,7 @@ export function MainNavbar() {
 							{/* Mobile Footer Info */}
 							<div className="mt-6 pt-4 border-t border-gray-200 text-center">
 								<p className="text-xs text-gray-500">
-									🌟 Educating with Heart Since 2010
+									🌟 Educating with Heart Since 2009
 								</p>
 								<p className="text-xs text-gray-400 mt-1">
 									Mon - Sat: 8:00 AM - 2:00 PM
