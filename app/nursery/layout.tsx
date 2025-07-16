@@ -113,19 +113,16 @@ export const metadata: Metadata = {
   // App-specific metadata
   applicationName: "Jharkhand Public School Website",
   referrer: "origin-when-cross-origin",
-  colorScheme: "light",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#3B82F6" },
-    { media: "(prefers-color-scheme: dark)", color: "#1E40AF" },
-  ],
+  
+
 
   // Manifest and icons
   manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      
+      
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
