@@ -142,7 +142,6 @@ export function MainNavbar() {
 
 						<MobileNavMenu
 							isOpen={isMobileMenuOpen}
-							onClose={() => setIsMobileMenuOpen(false)}
 						>
 							{/* Mobile Contact Info */}
 							<div className="px-4 py-3 bg-gradient-to-r from-blue-50 to-teal-50 rounded-lg mb-4">

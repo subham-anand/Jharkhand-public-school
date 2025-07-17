@@ -20,7 +20,7 @@ const Gallery = mongoose.models.Gallery || mongoose.model('Gallery', gallerySche
 // GET - Fetch single gallery image
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -30,7 +30,8 @@ export async function GET(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const image = await Gallery.findById(params.id);
+    const { id } = await params;
+    const image = await Gallery.findById(id);
     
     if (!image) {
       return NextResponse.json({ error: 'Image not found' }, { status: 404 });
@@ -46,7 +47,7 @@ export async function GET(
 // PATCH - Update gallery image
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -58,8 +59,9 @@ export async function PATCH(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
+    const { id } = await params;
     const image = await Gallery.findByIdAndUpdate(
-      params.id,
+      id,
       body,
       { new: true, runValidators: true }
     );
@@ -78,7 +80,7 @@ export async function PATCH(
 // DELETE - Delete gallery image
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -88,7 +90,8 @@ export async function DELETE(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const image = await Gallery.findByIdAndDelete(params.id);
+    const { id } = await params;
+    const image = await Gallery.findByIdAndDelete(id);
     
     if (!image) {
       return NextResponse.json({ error: 'Image not found' }, { status: 404 });

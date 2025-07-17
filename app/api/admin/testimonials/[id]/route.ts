@@ -26,7 +26,7 @@ const Testimonial = mongoose.models.Testimonial || mongoose.model('Testimonial',
 // GET - Fetch single testimonial
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -36,7 +36,8 @@ export async function GET(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const testimonial = await Testimonial.findById(params.id);
+    const { id } = await params;
+    const testimonial = await Testimonial.findById(id);
     
     if (!testimonial) {
       return NextResponse.json({ error: 'Testimonial not found' }, { status: 404 });
@@ -52,7 +53,7 @@ export async function GET(
 // PATCH - Update testimonial
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -60,31 +61,31 @@ export async function PATCH(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const body = await request.json();
-
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const testimonial = await Testimonial.findByIdAndUpdate(
-      params.id,
+    const { id } = await params;
+    const body = await request.json();
+    const updatedTestimonial = await Testimonial.findByIdAndUpdate(
+      id,
       body,
       { new: true, runValidators: true }
     );
-    
-    if (!testimonial) {
+
+    if (!updatedTestimonial) {
       return NextResponse.json({ error: 'Testimonial not found' }, { status: 404 });
     }
 
-    return NextResponse.json(testimonial);
+    return NextResponse.json(updatedTestimonial);
   } catch (error) {
     console.error('Error updating testimonial:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
 
-// DELETE - Delete testimonial
+// DELETE - Remove testimonial
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -94,7 +95,8 @@ export async function DELETE(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const testimonial = await Testimonial.findByIdAndDelete(params.id);
+    const { id } = await params;
+    const testimonial = await Testimonial.findByIdAndDelete(id);
     
     if (!testimonial) {
       return NextResponse.json({ error: 'Testimonial not found' }, { status: 404 });

@@ -16,7 +16,7 @@ const Content = mongoose.models.Content || mongoose.model('Content', contentSche
 // GET - Fetch single content item
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -26,7 +26,8 @@ export async function GET(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const content = await Content.findById(params.id);
+    const { id } = await params;
+    const content = await Content.findById(id);
     
     if (!content) {
       return NextResponse.json({ error: 'Content not found' }, { status: 404 });
@@ -42,7 +43,7 @@ export async function GET(
 // PUT - Update content item
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -59,8 +60,9 @@ export async function PUT(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
+    const { id } = await params;
     const content = await Content.findByIdAndUpdate(
-      params.id,
+      id,
       { section, type, key, value, description },
       { new: true, runValidators: true }
     );
@@ -82,7 +84,7 @@ export async function PUT(
 // PATCH - Update content value only
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -99,8 +101,9 @@ export async function PATCH(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
+    const { id } = await params;
     const content = await Content.findByIdAndUpdate(
-      params.id,
+      id,
       { value },
       { new: true }
     );
@@ -119,7 +122,7 @@ export async function PATCH(
 // DELETE - Remove content item
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId, isAdminUser } = await authAndCheckAdmin(request);
@@ -129,7 +132,8 @@ export async function DELETE(
 
     await mongoose.connect(process.env.MONGODB_URI!);
     
-    const content = await Content.findByIdAndDelete(params.id);
+    const { id } = await params;
+    const content = await Content.findByIdAndDelete(id);
     
     if (!content) {
       return NextResponse.json({ error: 'Content not found' }, { status: 404 });
