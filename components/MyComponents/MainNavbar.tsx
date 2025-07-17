@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import {
 	Navbar,
 	NavBody,
@@ -11,6 +10,7 @@ import {
 	MobileNavToggle,
 	MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { MobileDropdownMenu } from "@/components/ui/dropdown-menu";
 import { navItems } from "@/utils/navItems";
 import { IconPhoneCall, IconMail, IconMapPin, IconClock, IconStar} from "@tabler/icons-react";
 import { useState, useEffect } from "react";
@@ -168,15 +168,11 @@ export function MainNavbar() {
 							{/* Navigation Links */}
 							<div className="space-y-2 mb-6">
 								{navItems.map((item, idx) => (
-									<Link
-										key={`mobile-link-${idx}`}
-										href={item.link}
-										onClick={() => setIsMobileMenuOpen(false)}
-										className="flex items-center justify-between px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group"
-									>
-										<span className="font-medium">{item.name}</span>
-										<span className="text-gray-400 group-hover:text-blue-600 transition-colors">→</span>
-									</Link>
+									<MobileDropdownMenu
+										key={`mobile-nav-${idx}`}
+										item={item}
+										onItemClick={() => setIsMobileMenuOpen(false)}
+									/>
 								))}
 							</div>
 
