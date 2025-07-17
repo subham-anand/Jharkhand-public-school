@@ -289,6 +289,12 @@ export default function AdmissionOpen() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <ActionButton 
+              onClick={()=>{
+                    window.open(
+      "tel:+918541061847",
+      "_blank"
+    );
+              }}
                 variant="primary" 
                 icon={<IconPhone size={20} />}
                 className="bg-white text-gray-900 hover:bg-gray-100"
@@ -296,6 +302,7 @@ export default function AdmissionOpen() {
                 Call Us Now
               </ActionButton>
               <ActionButton 
+                onClick={handleTalkToAdvisor}            
                 variant="outline" 
                 className="border-white text-black hover:bg-white hover:text-gray-900"
               >

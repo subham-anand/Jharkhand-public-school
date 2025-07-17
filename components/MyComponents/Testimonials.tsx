@@ -341,7 +341,12 @@ export default function Testimonials() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <button onClick={()=>{
+                    window.open(
+      "https://wa.me/918541061847?text=I%20want%20to%20visit%20Jharkhand%20Public%20School",
+      "_blank"
+    );
+              }} className="px-8 py-4 bg-white text-blue-600 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                 Schedule a Visit
               </button>
               <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-300">
