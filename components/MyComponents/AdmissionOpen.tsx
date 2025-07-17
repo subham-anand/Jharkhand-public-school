@@ -107,18 +107,24 @@ const AdmissionStats = () => (
 
 export default function AdmissionOpen() {
   const handleApplyNow = () => {
-    console.log('Apply Now clicked');
-    // Add application logic here
+    window.open(
+      "https://www.jpsbarharwa.in/Admission",
+      "_blank"
+    );
   };
 
   const handleGetDetails = () => {
-    console.log('Get Admission Details clicked');
-    // Add details download logic here
+     window.open(
+      "https://www.jpsbarharwa.in/schoolBroucher",
+      "_blank"
+    );
   };
 
   const handleTalkToAdvisor = () => {
-    console.log('Talk to Advisor clicked');
-    // Add advisor contact logic here
+    window.open(
+      "https://wa.me/918541061847?text=I%20want%20to%20visit%20Jharkhand%20Public%20School",
+      "_blank"
+    );
   };
 
   return (
