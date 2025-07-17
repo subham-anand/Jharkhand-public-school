@@ -474,7 +474,7 @@ export default function AdmissionLayout({
               "@type": "Offer",
               "name": "School Admission",
               "availability": "https://schema.org/InStock",
-              "url": "https://www.jpsbarharwa.in/Admission/NewAdmissionForm"
+              "url": "https://www.jpsbarharwa.in/Admission"
             }
           })
         }}

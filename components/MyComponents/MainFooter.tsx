@@ -126,7 +126,7 @@ export default function MainFooter() {
     ],
     admissions: [
       { href: '/Admission', label: 'Admission Process' },
-      { href: '/Admission/NewAdmissionForm', label: 'Apply Online' },
+      { href: '/Admission', label: 'Apply Online' },
       { href: '/admission-requirements', label: 'Requirements' },
       { href: '/fee-structure', label: 'Fee Structure' },
       { href: '/scholarship', label: 'Scholarships' }

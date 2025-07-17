@@ -51,11 +51,13 @@ export default function Hero() {
               value='About us' 
               color='blue' 
               icon={<IconInfoHexagon size={20}/>}  
+              href='/AboutUs'
             />
             <CtaBtns 
               value='Apply for Admission' 
               color='orange' 
               icon={<IconSchool size={20}/>}  
+              href='/Admission'
             />
           </div>
 

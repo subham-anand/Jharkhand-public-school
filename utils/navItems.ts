@@ -17,7 +17,7 @@ export const navItems = [
 	},
 	{
 		name: "Gallery",
-		link: "#gallery"
+		link: "/#gallery"
 	},
 	{
 		name: "Contact",

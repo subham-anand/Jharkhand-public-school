@@ -99,11 +99,11 @@ export default function AdmissionIntro() {
             {/* Call to Action Button */}
             <div className="space-y-4">
               <Link 
-                href="/Admission/NewAdmissionForm"
+                href="/Admission"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-teal-600 to-orange-600 text-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold text-lg"
               >
                 <IconSchool size={24} />
-                <span>Open Admission Form</span>
+                <span>View Admission Information</span>
                 <IconArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               
@@ -207,10 +207,10 @@ export default function AdmissionIntro() {
                   </p>
                 </div>
                 <Link 
-                  href="/Admission/NewAdmissionForm"
+                  href="/Admission"
                   className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap"
                 >
-                  <span>Apply Now</span>
+                  <span>View Information</span>
                   <IconArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
