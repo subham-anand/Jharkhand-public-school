@@ -103,13 +103,17 @@ export function MainNavbar() {
 							</div>
 
 							{/* Contact Button */}
+					
 							<NavbarButton
+							href="tel:+918541061847"
 								variant="gradient"
 								className="flex items-center justify-center gap-x-2 px-4 py-2 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
 							>
 								<IconPhoneCall size={18} />
-								<span className="hidden sm:inline">Contact Now</span>
+								<span className="hidden sm:inline">Call Now</span>
+								
 							</NavbarButton>
+						
 
 							{/* Emergency Contact (Desktop Only) */}
 							{/* <div className="hidden xl:flex items-center gap-2 px-3 py-2 bg-red-50 border border-red-200 rounded-xl text-red-700">
@@ -179,12 +183,13 @@ export function MainNavbar() {
 							{/* Mobile Action Buttons */}
 							<div className="flex flex-col gap-3">
 								<NavbarButton
+								href="tel:+918541061847"
 									onClick={() => setIsMobileMenuOpen(false)}
 									variant="gradient"
 									className="w-full flex items-center justify-center gap-x-2 py-3 font-semibold rounded-xl shadow-lg"
 								>
 									<IconPhoneCall size={18} />
-									Contact Now
+									Call Now
 								</NavbarButton>
 
 								{/* Quick Actions */}
