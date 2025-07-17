@@ -52,9 +52,14 @@ export const navItems: NavItem[] = [
 			title: "Join Our School Family",
 			items: [
 				{
-					name: "Admission Process",
+					name: "Admission Overview",
 					link: "/Admission",
-					description: "How to apply & requirements"
+					description: "General admission information"
+				},
+				{
+					name: "Admission Process",
+					link: "/admission-process",
+					description: "Step-by-step process guide"
 				},
 				{
 					name: "Admission Requirements",

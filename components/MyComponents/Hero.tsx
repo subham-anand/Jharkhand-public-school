@@ -57,7 +57,7 @@ export default function Hero() {
               value='Apply for Admission' 
               color='orange' 
               icon={<IconSchool size={20}/>}  
-              href='/Admission'
+              href='/admission-process'
             />
           </div>
 
