@@ -107,18 +107,24 @@ const AdmissionStats = () => (
 
 export default function AdmissionOpen() {
   const handleApplyNow = () => {
-    console.log('Apply Now clicked');
-    // Add application logic here
+    window.open(
+      "https://www.jpsbarharwa.in/Admission",
+      "_blank"
+    );
   };
 
   const handleGetDetails = () => {
-    console.log('Get Admission Details clicked');
-    // Add details download logic here
+     window.open(
+      "https://www.jpsbarharwa.in/schoolBroucher",
+      "_blank"
+    );
   };
 
   const handleTalkToAdvisor = () => {
-    console.log('Talk to Advisor clicked');
-    // Add advisor contact logic here
+    window.open(
+      "https://wa.me/918541061847?text=I%20want%20to%20visit%20Jharkhand%20Public%20School",
+      "_blank"
+    );
   };
 
   return (
@@ -283,6 +289,12 @@ export default function AdmissionOpen() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <ActionButton 
+              onClick={()=>{
+                    window.open(
+      "tel:+918541061847",
+      "_blank"
+    );
+              }}
                 variant="primary" 
                 icon={<IconPhone size={20} />}
                 className="bg-white text-gray-900 hover:bg-gray-100"
@@ -290,6 +302,7 @@ export default function AdmissionOpen() {
                 Call Us Now
               </ActionButton>
               <ActionButton 
+                onClick={handleTalkToAdvisor}            
                 variant="outline" 
                 className="border-white text-black hover:bg-white hover:text-gray-900"
               >

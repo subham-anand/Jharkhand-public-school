@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import {
 	Navbar,
 	NavBody,
@@ -11,6 +10,7 @@ import {
 	MobileNavToggle,
 	MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { MobileDropdownMenu } from "@/components/ui/dropdown-menu";
 import { navItems } from "@/utils/navItems";
 import { IconPhoneCall, IconMail, IconMapPin, IconClock, IconStar} from "@tabler/icons-react";
 import { useState, useEffect } from "react";
@@ -103,13 +103,17 @@ export function MainNavbar() {
 							</div>
 
 							{/* Contact Button */}
+					
 							<NavbarButton
+							href="tel:+918541061847"
 								variant="gradient"
 								className="flex items-center justify-center gap-x-2 px-4 py-2 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
 							>
 								<IconPhoneCall size={18} />
-								<span className="hidden sm:inline">Contact Now</span>
+								<span className="hidden sm:inline">Call Now</span>
+								
 							</NavbarButton>
+						
 
 							{/* Emergency Contact (Desktop Only) */}
 							{/* <div className="hidden xl:flex items-center gap-2 px-3 py-2 bg-red-50 border border-red-200 rounded-xl text-red-700">
@@ -164,27 +168,24 @@ export function MainNavbar() {
 							{/* Navigation Links */}
 							<div className="space-y-2 mb-6">
 								{navItems.map((item, idx) => (
-									<Link
-										key={`mobile-link-${idx}`}
-										href={item.link}
-										onClick={() => setIsMobileMenuOpen(false)}
-										className="flex items-center justify-between px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group"
-									>
-										<span className="font-medium">{item.name}</span>
-										<span className="text-gray-400 group-hover:text-blue-600 transition-colors">→</span>
-									</Link>
+									<MobileDropdownMenu
+										key={`mobile-nav-${idx}`}
+										item={item}
+										onItemClick={() => setIsMobileMenuOpen(false)}
+									/>
 								))}
 							</div>
 
 							{/* Mobile Action Buttons */}
 							<div className="flex flex-col gap-3">
 								<NavbarButton
+								href="tel:+918541061847"
 									onClick={() => setIsMobileMenuOpen(false)}
 									variant="gradient"
 									className="w-full flex items-center justify-center gap-x-2 py-3 font-semibold rounded-xl shadow-lg"
 								>
 									<IconPhoneCall size={18} />
-									Contact Now
+									Call Now
 								</NavbarButton>
 
 								{/* Quick Actions */}

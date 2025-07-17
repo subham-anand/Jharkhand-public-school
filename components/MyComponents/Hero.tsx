@@ -1,6 +1,6 @@
 import React from 'react'
 import CtaBtns from './CtaBtns';
-import { IconInfoHexagon, IconSchool } from '@tabler/icons-react';
+import {  IconMail, IconSchool } from '@tabler/icons-react';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -48,10 +48,10 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 justify-center lg:justify-start">
             <CtaBtns 
-              value='About us' 
+              value='Contact Us' 
               color='blue' 
-              icon={<IconInfoHexagon size={20}/>}  
-              href='/AboutUs'
+              icon={<IconMail size={20}/>}  
+              href='/contact'
             />
             <CtaBtns 
               value='Apply for Admission' 
