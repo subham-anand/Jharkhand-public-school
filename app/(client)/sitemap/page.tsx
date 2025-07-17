@@ -4,7 +4,6 @@ import {
   IconHome, 
   IconSchool, 
   IconUsers, 
-//   IconBulletin, 
   IconPhoto, 
   IconPhone, 
   IconMail, 
@@ -14,7 +13,8 @@ import {
   IconAward,
   IconShieldCheck,
   IconHeartHandshake,
-  IconBrandPushbullet
+  IconBellRinging,
+  IconFileText
 } from '@tabler/icons-react';
 
 const Sitemap = () => {
@@ -22,100 +22,144 @@ const Sitemap = () => {
     {
       category: "Main Website",
       icon: <IconHome className="w-6 h-6" />,
-      description: "Primary website sections and pages",
+      description: "Primary website sections and homepage",
       pages: [
         {
           title: "Home",
           url: "/",
-          description: "Main landing page with hero section and overview",
-          sections: ["Hero", "Quick Links", "School Highlights"]
-        },
+          description: "Main landing page with complete school overview",
+          sections: ["Hero Section", "About Us", "Why Choose Us", "Admission Open", "Notice Board", "Gallery", "Testimonials", "Contact"]
+        }
+      ]
+    },
+    {
+      category: "About & Information",
+      icon: <IconSchool className="w-6 h-6" />,
+      description: "School information and detailed sections",
+      pages: [
         {
           title: "About Us",
-          url: "/#about",
-          description: "School history, mission, vision, and values",
-          sections: ["School History", "Mission & Vision", "Statistics", "Achievements"]
+          url: "/AboutUs",
+          description: "Comprehensive school information, history, and mission",
+          sections: ["School History", "Mission & Vision", "Faculty", "Infrastructure", "Achievements"]
         },
         {
-          title: "Why Choose Us",
-          url: "/#why-choose-us",
-          description: "Key differentiators and benefits of our school",
-          sections: ["Quality Education", "Experienced Teachers", "Modern Facilities", "Values-Based Learning"]
+          title: "Curriculum",
+          url: "/curriculum", 
+          description: "JAC Board curriculum and academic programs",
+          sections: ["JAC Board Curriculum", "Subject Details", "Teaching Methodology", "Assessment"]
+        },
+        {
+          title: "Activities",
+          url: "/activities",
+          description: "Extra-curricular activities and programs",
+          sections: ["Sports", "Cultural Activities", "Creative Arts", "Competitions"]
+        },
+        {
+          title: "Calendar",
+          url: "/calendar",
+          description: "Academic calendar and important dates",
+          sections: ["Academic Year", "Holidays", "Events", "Exam Schedule"]
+        },
+        {
+          title: "Safety",
+          url: "/safety",
+          description: "Student safety measures and protocols",
+          sections: ["Safety Policies", "Emergency Procedures", "Health Protocols", "Security Measures"]
         }
       ]
     },
     {
-      category: "Academic Services",
-      icon: <IconSchool className="w-6 h-6" />,
-      description: "Educational programs and academic offerings",
+      category: "Academic Programs",
+      icon: <IconBook className="w-6 h-6" />,
+      description: "Class-wise academic programs and details",
       pages: [
         {
-          title: "Academic Programs",
-          url: "/#academics",
-          description: "Nursery to Class 8 curriculum and programs",
-          sections: ["JAC Board Curriculum", "Hindi Medium Instruction", "Age-Appropriate Learning"]
+          title: "Nursery Program",
+          url: "/nursery",
+          description: "Early childhood education program",
+          sections: ["Age Group", "Curriculum", "Activities", "Development Focus"]
         },
         {
-          title: "Admission Information",
-          url: "/#admission",
-          description: "Current admission status and enrollment process",
-          sections: ["Admission Open", "Eligibility Criteria", "Application Process", "Fee Structure"]
-        },
-        {
-          title: "Class Structure",
-          url: "/#classes",
-          description: "Detailed information about each grade level",
-          sections: ["Nursery Program", "Primary Classes (1-5)", "Upper Primary (6-8)"]
+          title: "Primary Classes",
+          url: "/primary",
+          description: "Classes 1-5 academic program",
+          sections: ["Curriculum", "Subjects", "Teaching Methods", "Assessment"]
         }
       ]
     },
     {
-      category: "School Services",
+      category: "Admission & Enrollment",
+      icon: <IconCertificate className="w-6 h-6" />,
+      description: "Admission process and requirements",
+      pages: [
+        {
+          title: "Admission",
+          url: "/Admission",
+          description: "Complete admission information and process",
+          sections: ["Admission Process", "Application Form", "Required Documents", "Important Dates"]
+        },
+        {
+          title: "Admission Requirements",
+          url: "/admission-requirements",
+          description: "Detailed admission criteria and eligibility",
+          sections: ["Age Criteria", "Documents Required", "Entrance Process", "Selection Criteria"]
+        },
+        {
+          title: "Fee Structure",
+          url: "/fee-structure",
+          description: "Detailed fee information and payment options",
+          sections: ["Tuition Fees", "Additional Charges", "Payment Methods", "Fee Policies"]
+        },
+        {
+          title: "Scholarship",
+          url: "/scholarship",
+          description: "Scholarship programs and financial assistance",
+          sections: ["Merit Scholarships", "Need-based Aid", "Application Process", "Eligibility"]
+        }
+      ]
+    },
+    {
+      category: "Services & Support",
       icon: <IconUsers className="w-6 h-6" />,
-      description: "Student support and educational services",
+      description: "Student services and parent support",
       pages: [
         {
-          title: "Student Support",
-          url: "/#student-support",
-          description: "Comprehensive student development programs",
-          sections: ["Academic Support", "Counseling Services", "Special Needs Support"]
+          title: "Transport",
+          url: "/transport",
+          description: "School transportation services and routes",
+          sections: ["Bus Routes", "Timings", "Safety Features", "Transportation Fees"]
         },
         {
-          title: "Extra-Curricular Activities",
-          url: "/#activities",
-          description: "Sports, arts, and creative development programs",
-          sections: ["Sports Programs", "Cultural Activities", "Creative Arts", "Leadership Development"]
+          title: "Parent Portal",
+          url: "/parent-portal",
+          description: "Online portal for parents and guardians",
+          sections: ["Student Progress", "Attendance", "Fee Payment", "Communication"]
         },
         {
-          title: "Library Services",
-          url: "/#library",
-          description: "Learning resources and reading programs",
-          sections: ["Book Collection", "Reading Programs", "Digital Resources"]
+          title: "FAQ",
+          url: "/faq",
+          description: "Frequently asked questions and answers",
+          sections: ["Admission FAQs", "Academic FAQs", "General Questions", "Contact Info"]
         }
       ]
     },
     {
       category: "Communication & Updates",
-      icon: <IconBrandPushbullet className="w-6 h-6" />,
-      description: "School announcements and communication channels",
+      icon: <IconBellRinging className="w-6 h-6" />,
+      description: "School announcements and communication",
       pages: [
         {
           title: "Notice Board",
-          url: "/#notices",
-          description: "Important announcements and school updates",
-          sections: ["Latest Announcements", "Event Notifications", "Policy Updates", "Emergency Notices"]
+          url: "/#notice",
+          description: "Latest announcements and important updates",
+          sections: ["Current Notices", "Event Announcements", "Policy Updates", "Emergency Notices"]
         },
         {
-          title: "School Events",
-          url: "/#events",
-          description: "Upcoming and past school events and celebrations",
-          sections: ["Academic Events", "Cultural Programs", "Sports Competitions", "Parent Meetings"]
-        },
-        {
-          title: "News & Updates",
-          url: "/#news",
-          description: "School achievements and community news",
-          sections: ["School Achievements", "Student Success Stories", "Community Involvement"]
+          title: "Contact Us",
+          url: "/contact",
+          description: "Contact information and inquiry form",
+          sections: ["Contact Details", "Location", "Inquiry Form", "Office Hours"]
         }
       ]
     },
@@ -127,45 +171,33 @@ const Sitemap = () => {
         {
           title: "Image Gallery",
           url: "/#gallery",
-          description: "Visual showcase of school facilities and activities",
-          sections: ["Campus Facilities", "Classroom Activities", "Event Photos", "Student Life"]
+          description: "Photo gallery of school facilities and events",
+          sections: ["Campus Photos", "Event Pictures", "Student Activities", "Facilities"]
         },
         {
           title: "Testimonials",
           url: "/#testimonials",
           description: "Parent and student feedback and experiences",
-          sections: ["Parent Reviews", "Student Experiences", "Alumni Success", "Community Feedback"]
-        },
-        {
-          title: "Virtual Tour",
-          url: "/#tour",
-          description: "Interactive exploration of school facilities",
-          sections: ["Classrooms", "Playground", "Library", "Administrative Areas"]
+          sections: ["Parent Reviews", "Student Experiences", "Success Stories", "Community Feedback"]
         }
       ]
     },
     {
-      category: "Contact & Location",
-      icon: <IconPhone className="w-6 h-6" />,
-      description: "Contact information and school location details",
+      category: "Resources & Documents",
+      icon: <IconFileText className="w-6 h-6" />,
+      description: "Important documents and resources",
       pages: [
         {
-          title: "Contact Information",
-          url: "/#contact",
-          description: "Phone, email, and address details",
-          sections: ["Phone Numbers", "Email Addresses", "Physical Address", "Office Hours"]
+          title: "School Brochure",
+          url: "/schoolBroucher",
+          description: "Complete school brochure and information packet",
+          sections: ["School Overview", "Academic Programs", "Facilities", "Admission Info"]
         },
         {
-          title: "Location & Directions",
-          url: "/#location",
-          description: "School location with maps and directions",
-          sections: ["Address Details", "Map Integration", "Transportation", "Parking Information"]
-        },
-        {
-          title: "Visit Us",
-          url: "/#visit",
-          description: "Information for prospective families visiting the school",
-          sections: ["Visiting Hours", "Campus Tours", "Meeting Schedule", "Appointment Booking"]
+          title: "Sitemap",
+          url: "/sitemap",
+          description: "Complete website navigation and structure",
+          sections: ["All Pages", "Site Structure", "Navigation Guide", "Quick Links"]
         }
       ]
     },
@@ -177,20 +209,14 @@ const Sitemap = () => {
         {
           title: "Privacy Policy",
           url: "/legal/PrivacyPolicy",
-          description: "Data collection and privacy protection policies",
-          sections: ["Data Collection", "Usage Policies", "Student Privacy", "Contact Rights"]
+          description: "Data privacy and protection policies",
+          sections: ["Data Collection", "Usage Policies", "Student Privacy", "Rights"]
         },
         {
           title: "Terms of Service",
           url: "/legal/TermsofService",
-          description: "Website usage terms and educational service agreements",
+          description: "Website usage terms and service agreements",
           sections: ["Acceptable Use", "Educational Terms", "Liability", "Governing Law"]
-        },
-        {
-          title: "School Policies",
-          url: "/#policies",
-          description: "Academic and administrative policies",
-          sections: ["Academic Policies", "Admission Policies", "Safety Policies", "Code of Conduct"]
         }
       ]
     }
@@ -232,8 +258,8 @@ const Sitemap = () => {
           </div>
           <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
             <IconAward className="w-8 h-8 text-green-500 mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">2009</div>
-            <div className="text-sm text-gray-600">Established</div>
+            <div className="text-2xl font-bold text-gray-900">N-8</div>
+            <div className="text-sm text-gray-600">Classes Offered</div>
           </div>
         </div>
 
@@ -303,21 +329,21 @@ const Sitemap = () => {
           <div className="max-w-3xl mx-auto">
             <IconHeartHandshake className="w-12 h-12 mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-4">
-              Ready to Join Our School Community?
+              Ready to Join Jharkhand Public School?
             </h2>
             <p className="text-blue-100 mb-6">
-              Explore our website to learn more about our educational programs, 
-              facilities, and the nurturing environment we provide for young minds.
+              Explore our comprehensive educational programs from Nursery to Class 8. 
+              JAC Board curriculum with Hindi medium instruction in a nurturing environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/#admission" 
+                href="/Admission" 
                 className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200"
               >
                 Apply for Admission
               </Link>
               <Link 
-                href="/#contact" 
+                href="/contact" 
                 className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
               >
                 Contact Us
