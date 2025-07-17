@@ -95,6 +95,11 @@ export const navItems: NavItem[] = [
 					description: "Classes 1-8 programs"
 				},
 				{
+					name: "Teachers",
+					link: "/teachers",
+					description: "Our qualified and experienced faculty members"
+				},
+				{
 					name: "Activities",
 					link: "/activities",
 					description: "Co-curricular activities"
