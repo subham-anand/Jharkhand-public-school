@@ -33,11 +33,11 @@ export default function About() {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-6">
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                Since <span className="font-bold text-blue-600">2010</span>, Jharkhand Public School has been a trusted partner for parents who want more than just a classroom for their child.
+                Since <span className="font-bold text-blue-600">2009</span>, Jharkhand Public School has been a trusted partner for parents who want more than just a classroom for their child.
               </p>
               
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                We offer a <span className="font-semibold text-teal-600">caring, creative, and value-based</span> learning environment for children from <span className="font-semibold">Nursery to Class 5</span>.
+                We offer a <span className="font-semibold text-teal-600">caring, creative, and value-based</span> learning environment for children from <span className="font-semibold">Nursery to Class 8</span>.
               </p>
               
               <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-2xl border-l-4 border-blue-400">
@@ -74,7 +74,7 @@ export default function About() {
                   <IconBook size={20} className="text-orange-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Nursery to Class 5</h4>
+                  <h4 className="font-semibold text-gray-900">Nursery to Class 8</h4>
                   <p className="text-sm text-gray-600">Complete foundation</p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function About() {
                   <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-40">
                     <IconAward size={32} className="text-orange-600 mb-2" />
                     <h4 className="font-semibold text-orange-800">Success Rate</h4>
-                    <p className="text-2xl font-bold text-orange-600">98%</p>
+                    <p className="text-2xl font-bold text-orange-600">100%</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-40">
@@ -146,7 +146,7 @@ export default function About() {
           
           <div className="text-center mb-8">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-              Our Journey Since 2010
+              Our Journey Since 2009
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Over 15 years of dedication to nurturing young minds and building strong foundations for the future.
@@ -159,7 +159,7 @@ export default function About() {
                 <IconBook size={24} className="text-blue-600" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Founded</h4>
-              <p className="text-sm text-gray-600">Established in 2010 with a vision for quality education</p>
+              <p className="text-sm text-gray-600">Established in 2009 with a vision for quality education</p>
             </div>
 
             <div className="text-center group">

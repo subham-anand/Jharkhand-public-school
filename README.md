@@ -31,7 +31,7 @@ A modern, responsive website for Jharkhand Public School - a leading primary sch
 
 ## 🏫 About
 
-Jharkhand Public School is a premier educational institution established in **2010** in Barharwa, Jharkhand. The school provides:
+Jharkhand Public School is a premier educational institution established in **2009** in Barharwa, Jharkhand. The school provides:
 
 - **Primary Education**: Nursery to Class 8
 - **Board Affiliation**: JAC (Jharkhand Academic Council)
@@ -306,7 +306,7 @@ For any modifications or enhancements:
 
 **Made with ❤️ for Jharkhand Public School**
 
-*Nurturing Young Minds Since 2010*
+*Nurturing Young Minds Since 2009*
 
 [🌐 Visit Website](https://jpsbarharwa.in) • [📧 Contact School](mailto:contact@jpsbarharwa.in) • [👨‍💻 Developer](https://github.com/dev-aditya-lab)
 

@@ -265,7 +265,7 @@ export default function WhyChooseUs() {
             <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
               <span className="text-3xl">🎓</span>
             </div>
-            <div className="text-2xl lg:text-3xl font-bold text-orange-600 mb-1">98%</div>
+            <div className="text-2xl lg:text-3xl font-bold text-orange-600 mb-1">100%</div>
             <div className="text-gray-600 font-medium">Success Rate</div>
           </div>
         </div>

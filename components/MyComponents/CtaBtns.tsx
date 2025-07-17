@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 // Color mapping for different contexts
@@ -104,13 +105,15 @@ interface CtaBtnsProps {
   color?: ColorVariant;
   variant?: 'filled' | 'outline' | 'ghost';
   icon?: React.ReactNode;
+  href?: string;
 }
 
 export default function CtaBtns({
   value = "Get Started",
   color = "teal", 
   variant = "filled",
-    icon = null
+    icon = null,
+  href = "/#"
 }: CtaBtnsProps) {
   
   const colorConfig = colorVariants[color] || colorVariants.teal;
@@ -135,8 +138,10 @@ export default function CtaBtns({
   };
 
   return (
-    <button className={getButtonClasses()}>
+    <Link href={href} className={getButtonClasses()}>
       {icon}{value}
-    </button>
+    </Link>
   )
 }
+
+

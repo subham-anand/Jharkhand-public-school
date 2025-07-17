@@ -51,11 +51,13 @@ export default function Hero() {
               value='About us' 
               color='blue' 
               icon={<IconInfoHexagon size={20}/>}  
+              href='/AboutUs'
             />
             <CtaBtns 
               value='Apply for Admission' 
               color='orange' 
               icon={<IconSchool size={20}/>}  
+              href='/Admission'
             />
           </div>
 
@@ -70,7 +72,7 @@ export default function Hero() {
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center lg:text-left col-span-2 sm:col-span-1">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-600">98%</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-600">100%</div>
               <div className="text-sm text-gray-600">Success Rate</div>
             </div>
           </div>
