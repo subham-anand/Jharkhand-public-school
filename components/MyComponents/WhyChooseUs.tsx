@@ -49,13 +49,18 @@ const BackgroundPattern = () => (
 // Main CTA Section Component
 const CTASection = () => {
   const handleScheduleVisit = () => {
-    // Add your scheduling logic here
-    console.log('Schedule visit clicked');
+    // Redirect to WhatsApp with pre-filled message
+    window.open(
+      "https://wa.me/918541061847?text=I%20want%20to%20visit%20Jharkhand%20Public%20School",
+      "_blank"
+    );
   };
 
   const handleDownloadBrochure = () => {
-    // Add your download logic here
-    console.log('Download brochure clicked');
+    window.open(
+      "https://www.jpsbarharwa.in/schoolBroucher",
+      "_blank"
+    );
   };
 
   return (
