@@ -62,7 +62,7 @@ export default function PrincipalMessage() {
                           <div className="w-full h-full bg-gradient-to-br from-blue-300 to-teal-300 flex items-center justify-center">
                             {/* <IconUser size={80} className="text-white" /> */}
                             <Image
-                            src={"/dummyuser.jpeg"}
+                            src={"/jps_principal.jpg"}
                             alt='Principal Photo'
                             width={200}
                             height={200}
@@ -101,7 +101,7 @@ export default function PrincipalMessage() {
                           </div>
                           <div className="flex items-center gap-1 px-3 py-1 bg-white rounded-full shadow-md text-xs font-medium text-gray-700">
                             <IconStar size={14} />
-                            <span>15+ Years</span>
+                            <span>40+ Years</span>
                           </div>
                         </div>
                       </div>

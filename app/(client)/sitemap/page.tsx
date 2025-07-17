@@ -66,6 +66,12 @@ const Sitemap = () => {
           url: "/safety",
           description: "Student safety measures and protocols",
           sections: ["Safety Policies", "Emergency Procedures", "Health Protocols", "Security Measures"]
+        },
+        {
+          title: "Teachers",
+          url: "/teachers",
+          description: "Meet our qualified and experienced faculty members",
+          sections: ["Principal", "Headmaster", "Teaching Staff", "Faculty Qualifications"]
         }
       ]
     },
@@ -170,9 +176,9 @@ const Sitemap = () => {
       pages: [
         {
           title: "Image Gallery",
-          url: "/#gallery",
-          description: "Photo gallery of school facilities and events",
-          sections: ["Campus Photos", "Event Pictures", "Student Activities", "Facilities"]
+          url: "/gallery",
+          description: "Photo gallery of school facilities, events, and activities",
+          sections: ["Campus Photos", "Event Pictures", "Student Activities", "Facilities", "Achievements"]
         },
         {
           title: "Testimonials",
