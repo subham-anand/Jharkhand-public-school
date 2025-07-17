@@ -213,8 +213,7 @@ export default function ImageGallery() {
   };
 
   const handleExploreGallery = () => {
-    console.log('Explore Full Gallery clicked');
-    // Add navigation logic here
+    window.location.href = '/gallery';
   };
 
   return (

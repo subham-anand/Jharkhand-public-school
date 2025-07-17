@@ -114,7 +114,7 @@ export const navItems: NavItem[] = [
 			items: [
 				{
 					name: "Gallery",
-					link: "/#gallery",
+					link: "/gallery",
 					description: "School photos & events"
 				},
 				{

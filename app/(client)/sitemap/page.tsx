@@ -176,9 +176,9 @@ const Sitemap = () => {
       pages: [
         {
           title: "Image Gallery",
-          url: "/#gallery",
-          description: "Photo gallery of school facilities and events",
-          sections: ["Campus Photos", "Event Pictures", "Student Activities", "Facilities"]
+          url: "/gallery",
+          description: "Photo gallery of school facilities, events, and activities",
+          sections: ["Campus Photos", "Event Pictures", "Student Activities", "Facilities", "Achievements"]
         },
         {
           title: "Testimonials",
