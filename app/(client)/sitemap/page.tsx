@@ -66,6 +66,12 @@ const Sitemap = () => {
           url: "/safety",
           description: "Student safety measures and protocols",
           sections: ["Safety Policies", "Emergency Procedures", "Health Protocols", "Security Measures"]
+        },
+        {
+          title: "Teachers",
+          url: "/teachers",
+          description: "Meet our qualified and experienced faculty members",
+          sections: ["Principal", "Headmaster", "Teaching Staff", "Faculty Qualifications"]
         }
       ]
     },
