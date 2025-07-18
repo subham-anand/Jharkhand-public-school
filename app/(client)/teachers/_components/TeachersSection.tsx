@@ -286,7 +286,7 @@ export default function TeachersSection() {
 // Teacher Card Component
 function TeacherCard({ teacher }: { teacher: Teacher }) {
   return (
-    <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+    <div className="group relative bg-blue-50/80  border-blue-200 backdrop-blur-sm rounded-2xl p-6 border  hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       {/* Profile Image */}
       <div className="relative mb-6">
         <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">

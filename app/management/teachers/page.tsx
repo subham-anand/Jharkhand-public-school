@@ -71,7 +71,7 @@ export default function TeachersManagement() {
                     </svg>
                     Manage Teachers
                   </h2>
-                  <TeachersList currentUser={user} />
+                  <TeachersList />
                 </div>
               </div>
             </div>

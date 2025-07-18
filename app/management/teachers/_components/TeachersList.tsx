@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { AuthUser } from '@/services/AuthService';
 import { 
   IconEdit, 
   IconTrash, 
@@ -18,6 +17,7 @@ import {
   IconUser,
   IconRefresh
 } from '@tabler/icons-react';
+import EditTeacherForm from './EditTeacherForm';
 
 interface Teacher {
   _id: string;
@@ -39,16 +39,13 @@ interface Teacher {
   updatedAt: string;
 }
 
-interface TeachersListProps {
-  currentUser: AuthUser;
-}
-
-export default function TeachersList({ currentUser }: TeachersListProps) {
+export default function TeachersList() {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [editingTeacher, setEditingTeacher] = useState<Teacher | null>(null);
 
   const fetchTeachers = async () => {
     try {
@@ -93,6 +90,11 @@ export default function TeachersList({ currentUser }: TeachersListProps) {
     } finally {
       setIsDeleting(null);
     }
+  };
+
+  const handleEditSuccess = () => {
+    setMessage('Teacher updated successfully!');
+    fetchTeachers(); // Refresh the list
   };
 
   useEffect(() => {
@@ -249,7 +251,7 @@ export default function TeachersList({ currentUser }: TeachersListProps) {
                     {/* Action Buttons */}
                     <div className="flex items-center gap-2 ml-4">
                       <button
-                        onClick={() => console.log('Edit teacher:', teacher._id)}
+                        onClick={() => setEditingTeacher(teacher)}
                         className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                         title="Edit teacher"
                       >
@@ -337,6 +339,15 @@ export default function TeachersList({ currentUser }: TeachersListProps) {
             </div>
           ))}
         </div>
+      )}
+      
+      {/* Edit Teacher Form Modal */}
+      {editingTeacher && (
+        <EditTeacherForm
+          teacher={editingTeacher}
+          onClose={() => setEditingTeacher(null)}
+          onSuccess={handleEditSuccess}
+        />
       )}
     </div>
   );
