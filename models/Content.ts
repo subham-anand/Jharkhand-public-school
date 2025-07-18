@@ -1,12 +1,6 @@
 import mongoose from 'mongoose';
 
 const contentSchema = new mongoose.Schema({
-  key: { 
-    type: String, 
-    required: true, 
-    unique: true,
-    trim: true 
-  },
   title: { 
     type: String, 
     required: true,
@@ -14,20 +8,24 @@ const contentSchema = new mongoose.Schema({
   },
   type: { 
     type: String, 
-    enum: ['text', 'image', 'list', 'json'], 
+    enum: ['page', 'announcement', 'notice', 'policy', 'faq', 'about', 'hero'], 
     required: true 
   },
-  value: { 
-    type: mongoose.Schema.Types.Mixed, 
-    required: true 
-  },
-  description: { 
+  section: { 
     type: String, 
     trim: true 
   },
-  isActive: { 
+  content: { 
+    type: String, 
+    required: true 
+  },
+  tags: [{ 
+    type: String, 
+    trim: true 
+  }],
+  isPublished: { 
     type: Boolean, 
-    default: true 
+    default: false 
   },
   updatedBy: { 
     type: mongoose.Schema.Types.ObjectId, 
@@ -38,8 +36,8 @@ const contentSchema = new mongoose.Schema({
 });
 
 // Index for efficient queries
-contentSchema.index({ key: 1 });
 contentSchema.index({ type: 1 });
-contentSchema.index({ isActive: 1 });
+contentSchema.index({ isPublished: 1 });
+contentSchema.index({ section: 1 });
 
 export const Content = mongoose.models.Content || mongoose.model('Content', contentSchema);

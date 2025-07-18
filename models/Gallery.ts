@@ -15,6 +15,10 @@ const gallerySchema = new mongoose.Schema({
     required: true,
     trim: true 
   },
+  publicId: { 
+    type: String, 
+    trim: true 
+  },
   category: { 
     type: String, 
     enum: ['Events', 'Sports', 'Academics', 'Infrastructure', 'Cultural', 'Other'],

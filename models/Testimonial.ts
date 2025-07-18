@@ -6,9 +6,13 @@ const testimonialSchema = new mongoose.Schema({
     required: true,
     trim: true 
   },
-  relation: { 
+  email: { 
     type: String, 
-    enum: ['Parent', 'Student', 'Alumni', 'Teacher', 'Staff'],
+    trim: true 
+  },
+  relationship: { 
+    type: String, 
+    enum: ['parent', 'student', 'alumni', 'teacher', 'staff'],
     required: true 
   },
   rating: { 
@@ -27,9 +31,9 @@ const testimonialSchema = new mongoose.Schema({
     type: String, 
     trim: true 
   },
-  isActive: { 
+  isApproved: { 
     type: Boolean, 
-    default: true 
+    default: false 
   },
   isFeatured: { 
     type: Boolean, 
@@ -47,7 +51,7 @@ const testimonialSchema = new mongoose.Schema({
 });
 
 // Index for efficient queries
-testimonialSchema.index({ isActive: 1, isFeatured: 1 });
+testimonialSchema.index({ isApproved: 1, isFeatured: 1 });
 testimonialSchema.index({ rating: -1 });
 
 export const Testimonial = mongoose.models.Testimonial || mongoose.model('Testimonial', testimonialSchema);
