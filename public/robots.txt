@@ -1,0 +1,178 @@
+# robots.txt for Jharkhand Public School (jpsbarharwa.in)
+# Generated on: July 19, 2025
+
+# Allow all well-behaved crawlers access to public content
+User-agent: *
+Allow: /
+
+# Block access to admin and management areas
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# Block access to private directories and files
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /.env.local
+Disallow: /.env.production
+Disallow: /.env.development
+
+# Block access to authentication and session files
+Disallow: /api/auth/
+Disallow: /api/admin/
+Disallow: /api/management/
+
+# Block access to configuration files
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /next.config.ts
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.mjs
+Disallow: /eslint.config.mjs
+Disallow: /components.json
+
+# Block access to documentation and setup files
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /*.md$
+
+# Block access to temporary and cache files
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /.next/
+Disallow: /out/
+
+# Block access to development files
+Disallow: /hooks/
+Disallow: /lib/
+Disallow: /utils/
+Disallow: /middleware/
+Disallow: /models/
+Disallow: /controllers/
+Disallow: /services/
+
+# Allow specific important pages for SEO
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
+Allow: /og-image.jpg
+
+# Allow all public images and assets
+Allow: /logo.png
+Allow: /hero_img.jpg
+Allow: /hero_img.png
+Allow: /jps_principal.jpg
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.gif$
+Allow: /*.ico$
+
+# Allow CSS and JS files for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Specific bot configurations
+# Google Bot - Full access to public content
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# Bing Bot - Full access to public content
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# Facebook Bot - For social media previews
+User-agent: facebookexternalhit
+Allow: /
+Allow: /og-image.jpg
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# Twitter Bot - For social media previews
+User-agent: Twitterbot
+Allow: /
+Allow: /og-image.jpg
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# LinkedIn Bot - For professional sharing
+User-agent: LinkedInBot
+Allow: /
+Allow: /og-image.jpg
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# WhatsApp Bot - For social sharing
+User-agent: WhatsApp
+Allow: /
+Allow: /og-image.jpg
+Disallow: /admin/
+Disallow: /management/
+Disallow: /api/
+
+# Block malicious bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+# Block AI training bots (optional - remove if you want AI training)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Crawl delay for heavy crawlers (1 second)
+User-agent: *
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.jpsbarharwa.in/sitemap.xml
+
+# Additional sitemaps (if you have specific ones)
+# Sitemap: https://www.jpsbarharwa.in/sitemap-images.xml
+# Sitemap: https://www.jpsbarharwa.in/sitemap-pages.xml
+
+# Host directive (helps with canonical domain)
+Host: https://www.jpsbarharwa.in
