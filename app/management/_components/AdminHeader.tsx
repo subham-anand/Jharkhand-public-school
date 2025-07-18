@@ -65,6 +65,26 @@ export default function AdminHeader({ user }: AdminHeaderProps) {
 
         {/* Right Section */}
         <div className="flex items-center gap-3">
+          {/* Quick Links */}
+          <div className="hidden lg:flex items-center gap-2">
+            <a
+              href="/teachers"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+            >
+              View Teachers Page
+            </a>
+            <a
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              View Website
+            </a>
+          </div>
+
           {/* Theme Toggle */}
           <button className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
             <IconSun size={20} />
