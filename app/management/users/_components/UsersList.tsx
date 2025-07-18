@@ -114,18 +114,30 @@ export default function UsersList({ currentUser }: UsersListProps) {
   };
 
   const handleDeleteUser = async (userId: string) => {
-    if (!confirm('Are you sure you want to delete this user?')) return;
+    const user = users.find(u => u._id === userId);
+    const confirmMessage = `Are you sure you want to delete "${user?.email}"? This action cannot be undone.`;
+    
+    if (!confirm(confirmMessage)) return;
 
+    setUpdatingUser(userId);
     try {
       const response = await fetch(`/api/management/users/${userId}`, {
         method: 'DELETE',
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setUsers(users.filter(user => user._id !== userId));
+        // Optional: Show success message
+        setError(''); // Clear any previous errors
+      } else {
+        setError(data.error || 'Failed to delete user');
       }
     } catch {
-      setError('Failed to delete user');
+      setError('Failed to delete user. Please try again.');
+    } finally {
+      setUpdatingUser(null);
     }
   };
 
@@ -344,7 +356,10 @@ export default function UsersList({ currentUser }: UsersListProps) {
                             
                             <button
                               onClick={() => handleEditUser(user)}
-                              className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                              disabled={updatingUser === user._id}
+                              className={`p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors ${
+                                updatingUser === user._id ? 'opacity-50 cursor-not-allowed' : ''
+                              }`}
                               title="Edit user"
                             >
                               <IconEdit size={16} />
@@ -352,10 +367,17 @@ export default function UsersList({ currentUser }: UsersListProps) {
                             
                             <button
                               onClick={() => handleDeleteUser(user._id)}
-                              className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                              disabled={updatingUser === user._id}
+                              className={`p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors ${
+                                updatingUser === user._id ? 'opacity-50 cursor-not-allowed' : ''
+                              }`}
                               title="Delete user"
                             >
-                              <IconTrash size={16} />
+                              {updatingUser === user._id ? (
+                                <IconLoader size={16} className="animate-spin" />
+                              ) : (
+                                <IconTrash size={16} />
+                              )}
                             </button>
                           </div>
                         )}
