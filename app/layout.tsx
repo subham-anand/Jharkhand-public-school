@@ -65,16 +65,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-      <SpeedInsights/>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
             enableSystem={true}
             disableTransitionOnChange={false}
-          >
+            >
             {children}
-            
+            <SpeedInsights/>
           </ThemeProvider>
         </SmoothScrollProvider>
       </body>
