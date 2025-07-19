@@ -5,8 +5,7 @@
 User-agent: *
 Allow: /
 
-# Block access to admin and management areas
-Disallow: /admin/
+# Block access to management areas
 Disallow: /management/
 Disallow: /api/
 
@@ -21,7 +20,6 @@ Disallow: /.env.development
 
 # Block access to authentication and session files
 Disallow: /api/auth/
-Disallow: /api/admin/
 Disallow: /api/management/
 
 # Block access to configuration files
@@ -82,14 +80,12 @@ Allow: /*.js$
 # Google Bot - Full access to public content
 User-agent: Googlebot
 Allow: /
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 
 # Bing Bot - Full access to public content
 User-agent: Bingbot
 Allow: /
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 
@@ -97,7 +93,6 @@ Disallow: /api/
 User-agent: facebookexternalhit
 Allow: /
 Allow: /og-image.jpg
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 
@@ -105,7 +100,6 @@ Disallow: /api/
 User-agent: Twitterbot
 Allow: /
 Allow: /og-image.jpg
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 
@@ -113,7 +107,6 @@ Disallow: /api/
 User-agent: LinkedInBot
 Allow: /
 Allow: /og-image.jpg
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 
@@ -121,7 +114,6 @@ Disallow: /api/
 User-agent: WhatsApp
 Allow: /
 Allow: /og-image.jpg
-Disallow: /admin/
 Disallow: /management/
 Disallow: /api/
 

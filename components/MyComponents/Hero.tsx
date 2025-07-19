@@ -7,35 +7,71 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
-  
-  // Array of images for the carousel
-  const carouselImages = [
+  const [carouselImages, setCarouselImages] = useState([
     {
+      _id: 'default-1',
       src: "/hero_img.png",
       alt: "Students learning at Jharkhand Public School",
       emoji: "🎓"
     },
     {
+      _id: 'default-2',
       src: "/hero_img.jpg", 
       alt: "School building and facilities",
       emoji: "🏫"
     },
     {
+      _id: 'default-3',
       src: "/hero-img-pn.png",
       alt: "Students in classroom activities",
       emoji: "📚"
     },
     {
+      _id: 'default-4',
       src: "/jps_principal.jpg",
       alt: "School principal and leadership",
       emoji: "👨‍🏫"
     },
     {
+      _id: 'default-5',
       src: "/placeholder_img.jpg",
       alt: "School campus and environment",
       emoji: "🌟"
     }
-  ];
+  ]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch carousel images from API
+  useEffect(() => {
+    const fetchCarouselImages = async () => {
+      try {
+        const response = await fetch('/api/hero-carousel');
+        const data = await response.json();
+        
+        if (data.success && data.data.length > 0) {
+          const formattedImages = data.data.map((image: {
+            _id: string;
+            imageUrl: string;
+            altText: string;
+            emoji: string;
+          }) => ({
+            _id: image._id,
+            src: image.imageUrl,
+            alt: image.altText,
+            emoji: image.emoji
+          }));
+          setCarouselImages(formattedImages);
+        }
+      } catch (error) {
+        console.error('Error fetching carousel images:', error);
+        // Keep default images if API fails
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCarouselImages();
+  }, []);
 
   // Auto-scroll effect
   useEffect(() => {
@@ -172,27 +208,34 @@ export default function Hero() {
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
               >
-                {carouselImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-all duration-700 ease-out ${
-                      index === currentImageIndex 
-                        ? 'opacity-100 transform translate-x-0' 
-                        : index < currentImageIndex 
-                          ? 'opacity-0 transform -translate-x-full'
-                          : 'opacity-0 transform translate-x-full'
-                    }`}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                {isLoading ? (
+                  // Loading skeleton
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-xl flex items-center justify-center">
+                    <div className="text-gray-400">Loading...</div>
                   </div>
-                ))}
+                ) : (
+                  carouselImages.map((image, index) => (
+                    <div
+                      key={image._id}
+                      className={`absolute inset-0 transition-all duration-700 ease-out ${
+                        index === currentImageIndex 
+                          ? 'opacity-100 transform translate-x-0' 
+                          : index < currentImageIndex 
+                            ? 'opacity-0 transform -translate-x-full'
+                            : 'opacity-0 transform translate-x-full'
+                      }`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover"
+                        priority={index === 0}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  ))
+                )}
                 
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>

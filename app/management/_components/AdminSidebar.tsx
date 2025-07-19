@@ -14,7 +14,8 @@ import {
   IconMail,
   IconChartBar,
   IconUserPlus,
-  IconChevronRight
+  IconChevronRight,
+  IconSlideshow
 } from '@tabler/icons-react';
 import { AuthUser } from '@/services/AuthService';
 
@@ -34,6 +35,14 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
       permission: null,
       color: 'blue',
       description: 'Overview & Stats'
+    },
+    {
+      title: 'Hero Carousel',
+      href: '/management/hero-carousel',
+      icon: IconSlideshow,
+      permission: 'content',
+      color: 'indigo',
+      description: 'Homepage Hero Images'
     },
     {
       title: 'User Management',
