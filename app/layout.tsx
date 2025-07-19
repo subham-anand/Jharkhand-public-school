@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import SmoothScrollProvider from "@/components/SmoothScrollProvider"
 import "./globals.css";
@@ -63,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+      <SpeedInsights/>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
