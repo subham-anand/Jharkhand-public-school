@@ -8,7 +8,8 @@ import {
   IconUsers,
   IconPhoto,
   IconHeart,
-  IconFileText
+  IconFileText,
+  IconSlideshow
 } from '@tabler/icons-react';
 
 interface QuickActionsProps {
@@ -17,6 +18,14 @@ interface QuickActionsProps {
 
 export default function QuickActions({ user }: QuickActionsProps) {
   const quickActions = [
+    {
+      title: 'Hero Carousel',
+      description: 'Manage homepage hero images',
+      href: '/management/hero-carousel',
+      icon: IconSlideshow,
+      color: 'indigo',
+      permission: 'content'
+    },
     {
       title: 'Add New Gallery Image',
       description: 'Upload photos from recent events',
@@ -80,7 +89,8 @@ export default function QuickActions({ user }: QuickActionsProps) {
       purple: 'bg-purple-50 text-purple-600 hover:bg-purple-100',
       orange: 'bg-orange-50 text-orange-600 hover:bg-orange-100',
       teal: 'bg-teal-50 text-teal-600 hover:bg-teal-100',
-      red: 'bg-red-50 text-red-600 hover:bg-red-100'
+      red: 'bg-red-50 text-red-600 hover:bg-red-100',
+      indigo: 'bg-indigo-50 text-indigo-600 hover:bg-indigo-100'
     };
     return colors[color as keyof typeof colors] || 'bg-gray-50 text-gray-600 hover:bg-gray-100';
   };
