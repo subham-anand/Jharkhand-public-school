@@ -64,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
@@ -76,8 +76,8 @@ export default function RootLayout({
             <SpeedInsights/>
           </ThemeProvider>
         </SmoothScrollProvider>
+        <GoogleAnalytics gaId="G-QEE427YBCX" />
       </body>
-      <GoogleAnalytics gaId="G-QEE427YBCX" />
     </html>
   );
 }

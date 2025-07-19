@@ -45,10 +45,21 @@ export default function Hero() {
   useEffect(() => {
     const fetchCarouselImages = async () => {
       try {
-        const response = await fetch('/api/hero-carousel');
+        setIsLoading(true);
+        const response = await fetch('/api/hero-carousel', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const data = await response.json();
         
-        if (data.success && data.data.length > 0) {
+        if (data.success && data.data && Array.isArray(data.data) && data.data.length > 0) {
           const formattedImages = data.data.map((image: {
             _id: string;
             imageUrl: string;
@@ -57,20 +68,25 @@ export default function Hero() {
           }) => ({
             _id: image._id,
             src: image.imageUrl,
-            alt: image.altText,
-            emoji: image.emoji
+            alt: image.altText || "School image",
+            emoji: image.emoji || "🎓"
           }));
           setCarouselImages(formattedImages);
         }
       } catch (error) {
         console.error('Error fetching carousel images:', error);
-        // Keep default images if API fails
+        // Keep default images if API fails - no state change needed
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchCarouselImages();
+    // Only fetch if we're in the browser environment
+    if (typeof window !== 'undefined') {
+      fetchCarouselImages();
+    } else {
+      setIsLoading(false);
+    }
   }, []);
 
   // Auto-scroll effect
