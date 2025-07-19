@@ -1,9 +1,89 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CtaBtns from './CtaBtns';
 import {  IconMail, IconSchool } from '@tabler/icons-react';
 import Image from 'next/image';
 
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  
+  // Array of images for the carousel
+  const carouselImages = [
+    {
+      src: "/hero_img.png",
+      alt: "Students learning at Jharkhand Public School",
+      emoji: "🎓"
+    },
+    {
+      src: "/hero_img.jpg", 
+      alt: "School building and facilities",
+      emoji: "🏫"
+    },
+    {
+      src: "/hero-img-pn.png",
+      alt: "Students in classroom activities",
+      emoji: "📚"
+    },
+    {
+      src: "/jps_principal.jpg",
+      alt: "School principal and leadership",
+      emoji: "👨‍🏫"
+    },
+    {
+      src: "/placeholder_img.jpg",
+      alt: "School campus and environment",
+      emoji: "🌟"
+    }
+  ];
+
+  // Auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex(
+      currentImageIndex === carouselImages.length - 1 ? 0 : currentImageIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      currentImageIndex === 0 ? carouselImages.length - 1 : currentImageIndex - 1
+    );
+  };
+
+  // Touch handlers for swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextImage();
+    }
+    if (isRightSwipe) {
+      prevImage();
+    }
+  };
+
   return (
     <header className="hero relative overflow-hidden">
       {/* Background gradient overlay */}
@@ -14,7 +94,7 @@ export default function Hero() {
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-4000"></div>
       
-      <div className="hero-content flex flex-col lg:flex-row items-center justify-between w-full min-h-screen px-4 sm:px-6 lg:px-8 xl:px-12 py-12 lg:py-20 max-w-7xl mx-auto relative z-10">
+      <div className="hero-content flex flex-col lg:flex-row items-center justify-between w-full min-h-screen px-4 sm:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 lg:py-20 max-w-7xl mx-auto relative z-10 gap-8 lg:gap-12">
         
         {/* Text Content */}
         <div className='text-div lg:w-1/2 xl:w-3/5 space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1'>
@@ -78,34 +158,102 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className='image-div lg:w-1/2 xl:w-2/5 flex justify-center items-center order-1 lg:order-2 mb-8 lg:mb-0'>
-          <div className="relative group">
-            {/* Decorative background for image */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-teal-400 rounded-2xl blur-2xl opacity-20 group-hover:opacity-30 transition duration-300"></div>
+        {/* Image Carousel Section */}
+        <div className='image-div w-full lg:w-1/2 xl:w-2/5 flex justify-center items-center order-1 lg:order-2 mb-8 lg:mb-0 px-4'>
+          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg group">
             
-            {/* Main image container */}
-            <div className="relative bg-white rounded-2xl p-4 shadow-2xl group-hover:shadow-3xl transition-all duration-300 hover:scale-105">
-              <Image
-                src="/hero_img.png"
-                alt="Students learning at Jharkhand Public School"
-                width={640}
-                height={720}
-                className='hero-image rounded-xl w-full h-auto max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl'
-                priority
-              />
+            {/* Main carousel container */}
+            <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl bg-white">
               
-              {/* Floating elements around image */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                <span className="text-2xl">🎓</span>
+              {/* Image container */}
+              <div 
+                className="relative aspect-[3/4] sm:aspect-[4/5] w-full"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
+                {carouselImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-700 ease-out ${
+                      index === currentImageIndex 
+                        ? 'opacity-100 transform translate-x-0' 
+                        : index < currentImageIndex 
+                          ? 'opacity-0 transform -translate-x-full'
+                          : 'opacity-0 transform translate-x-full'
+                    }`}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                      priority={index === 0}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                ))}
+                
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                
+                {/* Clean navigation arrows - always visible */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-200 z-10 border border-gray-200"
+                  aria-label="Previous image"
+                >
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-200 z-10 border border-gray-200"
+                  aria-label="Next image"
+                >
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                <span className="text-xl">📚</span>
-              </div>
-              <div className="absolute top-1/4 -left-6 w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center shadow-lg animate-ping">
-                <span className="text-sm">⭐</span>
+              
+              {/* Bottom section with indicators and counter */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/95 to-transparent backdrop-blur-sm p-3 sm:p-4">
+                
+                {/* Carousel indicators */}
+                <div className="flex justify-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-blue-600 w-6 sm:w-8' 
+                          : 'bg-gray-300 w-1.5 sm:w-2 hover:bg-gray-400 active:bg-gray-500'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+                
+                {/* Image counter and title */}
+                <div className="text-center">
+                  <div className="text-xs text-gray-500 font-medium">
+                    {currentImageIndex + 1} of {carouselImages.length}
+                  </div>
+                  <div className="text-xs sm:text-sm text-gray-700 font-medium mt-1 truncate px-2">
+                    {carouselImages[currentImageIndex].alt.split(' at ')[0]}
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Subtle decorative elements */}
+            <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-blue-500 rounded-full opacity-20"></div>
+            <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 w-1.5 h-1.5 sm:w-2 sm:h-2 lg:w-3 lg:h-3 bg-teal-500 rounded-full opacity-20"></div>
+            
           </div>
         </div>
       </div>
