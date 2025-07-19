@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import SmoothScrollProvider from "@/components/SmoothScrollProvider"
 import "./globals.css";
@@ -73,9 +74,11 @@ export default function RootLayout({
             disableTransitionOnChange={false}
           >
             {children}
+            
           </ThemeProvider>
         </SmoothScrollProvider>
       </body>
+      <GoogleAnalytics gaId="G-QEE427YBCX" />
     </html>
   );
 }

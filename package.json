@@ -32,6 +32,7 @@
   "homepage": "https://jpsbarharwa.in",
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
+    "@next/third-parties": "^15.4.2",
     "@tabler/icons-react": "^3.34.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^8.5.9",
