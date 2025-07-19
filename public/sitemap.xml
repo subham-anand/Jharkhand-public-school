@@ -1,112 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
+<!-- Sitemap for Jharkhand Public School - Generated: July 20, 2025 -->
+<!-- Main Pages -->
 <url>
-  <loc>https://www.jpsbarharwa.in/</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
+  <loc>https://jpsbarharwa.in/</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
+
+<!-- About & Information Pages -->
 <url>
-  <loc>https://www.jpsbarharwa.in/contact</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/Admission</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/AboutUs</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/admission-requirements</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/fee-structure</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/scholarship</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/curriculum</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/nursery</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/primary</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/activities</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/calendar</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/faq</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/parent-portal</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/transport</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/safety</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/legal/PrivacyPolicy</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/legal/TermsofService</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/sitemap</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.jpsbarharwa.in/schoolBroucher</loc>
-  <lastmod>2025-07-17T18:31:36+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://jpsbarharwa.in/AboutUs</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
 
+<!-- Admission Related Pages -->
+<url>
+  <loc>https://jpsbarharwa.in/Admission</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/admission-process</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/admission-requirements</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/fee-structure</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/scholarship</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<!-- Academic Pages -->
+<url>
+  <loc>https://jpsbarharwa.in/curriculum</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/nursery</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/primary</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/teachers</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<!-- School Life & Activities -->
+<url>
+  <loc>https://jpsbarharwa.in/activities</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/gallery</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/calendar</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<!-- Contact & Support -->
+<url>
+  <loc>https://jpsbarharwa.in/contact</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/faq</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.65</priority>
+</url>
+
+<!-- Parent & Student Resources -->
+<url>
+  <loc>https://jpsbarharwa.in/parent-portal</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/transport</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.65</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/safety</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.65</priority>
+</url>
+
+<!-- Legal & Compliance -->
+<url>
+  <loc>https://jpsbarharwa.in/legal/PrivacyPolicy</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/legal/TermsofService</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.40</priority>
+</url>
+
+<!-- Additional Resources -->
+<url>
+  <loc>https://jpsbarharwa.in/sitemap</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://jpsbarharwa.in/schoolBroucher</loc>
+  <lastmod>2025-07-20T00:00:00+05:30</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
+</url>
 
 </urlset>

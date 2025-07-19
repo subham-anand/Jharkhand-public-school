@@ -247,7 +247,19 @@ export default function Hero() {
                         fill
                         className="object-cover"
                         priority={index === 0}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        quality={index === 0 ? 90 : 75}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyztP8AuNzy/wAjiINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wInkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4wINkJH5C4w/9k="
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        onLoad={() => {
+                          // Track image load for performance monitoring
+                          if (index === 0 && typeof window !== 'undefined' && window.gtag) {
+                            window.gtag('event', 'hero_image_loaded', {
+                              custom_parameter: 'first_image'
+                            });
+                          }
+                        }}
                       />
                     </div>
                   ))

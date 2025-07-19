@@ -160,11 +160,11 @@ User-agent: *
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://www.jpsbarharwa.in/sitemap.xml
+Sitemap: https://jpsbarharwa.in/sitemap.xml
 
 # Additional sitemaps (if you have specific ones)
-# Sitemap: https://www.jpsbarharwa.in/sitemap-images.xml
-# Sitemap: https://www.jpsbarharwa.in/sitemap-pages.xml
+# Sitemap: https://jpsbarharwa.in/sitemap-images.xml
+# Sitemap: https://jpsbarharwa.in/sitemap-pages.xml
 
 # Host directive (helps with canonical domain)
-Host: https://www.jpsbarharwa.in
+Host: https://jpsbarharwa.in
