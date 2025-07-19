@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import SmoothScrollProvider from "@/components/SmoothScrollProvider"
+import PerformanceOptimizer from "@/components/PerformanceOptimizer"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -64,7 +65,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+      </head>
+      <body suppressHydrationWarning>
+        <PerformanceOptimizer />
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
@@ -76,8 +87,8 @@ export default function RootLayout({
             <SpeedInsights/>
           </ThemeProvider>
         </SmoothScrollProvider>
+        <GoogleAnalytics gaId="G-QEE427YBCX" />
       </body>
-      <GoogleAnalytics gaId="G-QEE427YBCX" />
     </html>
   );
 }
